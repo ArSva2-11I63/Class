@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sortng</title>
+</head>
+<body>
+    <button onclick="myFunction()">Click</button>
+    <button onclick="newFunction()">Ckicl</button>
+    <p id="my"></p>
+    <p id="mt2"></p>
+ <script>
+  var num = [12, 4, 1, 13, 39, 62]
+
+  function myFunction() {
+    document.getElementById("my").innerHTML = num.sort(function(a, b) {return a-b})
+ }
+  function newFunction() {
+    document.getElementById("mt2").innerHTML = num.sort(function(a, b) {return b-a})
+  }
+  
+  function funcTions(a) {
+    return a * 34
+  }
+   var x = num.map(funcTions);
+   document.write(x)
+
+  var b = 12
+  var c = 13
+  var d = eval("b * c")
+  document.write(d)
+  
+  
+
+</script>   
+</body>
+</html>
