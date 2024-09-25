@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+    <p id="myid"></p>
+    <p id="my2id"></p>
+ <script>
+    // JSON
+   function myFunction(a){
+    document.getElementById("myid").innerHTML = a
+   };
+
+   function myFunction2(){
+    obj = {Age:12, Grade:7, Name:"Aarush"}
+   var str = JSON.stringify(obj)
+   var my = JSON.parse(str)
+   myFunction(my.Name)
+   } ;
+
+   myFunction2();
+
+    // async await
+    function display(value){
+    document.getElementById("my2id").innerHTML = value
+    }
+    async function myfunctions(x, y){
+     let b = await x + y;
+     display(b);
+    }
+    myfunctions(15, 2);
+    
+    // promise
+
+    function promise1(){
+     document.write("hello");
+    }
+    
+    let var1 = new Promise(function(myResolve, myReject){
+        let z = 0;
+        if (z == 1) {
+          myResolve("Ok");
+        } else {
+          myReject("Error");  
+        }
+    });
+    var1.then(
+      function(value){
+        promise1();
+      },
+      function(error){
+        promise1(error);
+
+      }
+      ); 
+ </script>  
+</body>
+</html>
