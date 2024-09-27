@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+ <form name="name1" onsubmit="startValidation()">
+  <label>Name: </label>
+  <input type="text" name="firstname" placeholder="Enter your First Name"><br>
+  <input type="submit" value="Submit">
+  
+ </form>   
+
+ <script>
+  function startValidation() {
+   var x = document.forms["name1"]["firstname"].value;
+   if(x == ''){
+     alert("Enter a valid name.");
+     return false
+   } else {
+    document.write("<p> OK </p>")
+   }
+  }
+ </script>
+</body>
+</html>

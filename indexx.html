@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+ <input type="number" id="num" min="63" max="100" required>
+ <button onclick="formVal()">Done</button>
+ <p id="myid2" style="color: green;"></p>
+
+ <script>
+    function formVal() {
+      var y = document.getElementById("num")
+      if(!y.checkValidity()){
+        document.getElementById("myid2").innerHTML = y.validationMessage
+      } else {
+        document.getElementById("myid2").innerHTML = "OK"
+      }
+    }
+ </script>
+</body>
+</html>
